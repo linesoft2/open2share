@@ -1,12 +1,11 @@
 package top.linesoft.open2share;
 
 import android.content.ComponentName;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
@@ -14,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreference;
+
+import java.util.Objects;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -48,12 +49,16 @@ public class SettingsActivity extends AppCompatActivity {
                 startActivity(intent);
                 return true;
             }else if(preference == aboutPreference){
-                new AlertDialog.Builder(getContext())
+                new AlertDialog.Builder(requireContext())
                         .setTitle("关于本软件")
                         .setMessage("作者：双霖")
                         .setPositiveButton("确定",null)
                         .setNeutralButton("网站", (dialog, which) -> {
-                            MainActivity.openUrl(getContext(),"https://www.linesoft.top");
+                            Intent intent = new Intent();
+                            intent.setAction("android.intent.action.VIEW");
+                            Uri content_url = Uri.parse("https://www.linesoft.top");
+                            intent.setData(content_url);
+                            startActivity(intent);
                         })
                         .create()
                         .show();
@@ -92,14 +97,14 @@ public class SettingsActivity extends AppCompatActivity {
             Log.d("onPreferenceChange", "onPreferenceChange: 被触发");
             if(preference == hidePreference){
 //                Toast.makeText(getContext(),"当前值为："+newValue,Toast.LENGTH_LONG).show();
-                PackageManager pm = getContext().getPackageManager();
-                ComponentName hideComponentName = new ComponentName(getContext(), "top.linesoft.open2share.hide_icon");
+                PackageManager pm = requireContext().getPackageManager();
+                ComponentName hideComponentName = new ComponentName(requireContext(), "top.linesoft.open2share.hide_icon");
                 ComponentName unhideComponentName = new ComponentName(getContext(), "top.linesoft.open2share.unhide_icon");
-                if((Boolean) newValue == true){
+                if((Boolean) newValue){
 
                     AlertDialog.Builder mDialogBuilder = new AlertDialog.Builder(getContext());
                     mDialogBuilder.setTitle("警告：")
-                            .setMessage("在部分系统下，隐藏桌面图标会导致本Activity被关闭，您将很难再次进入到本Activity，是否继续？")
+                            .setMessage("1.在部分系统下，隐藏桌面图标会导致本页面被关闭，您将很难再次进入到本页面，是否继续？\n2.部分系统不支持该功能")
                             .setPositiveButton("是", (dialog, which) -> {
                                 pm.setComponentEnabledSetting(hideComponentName,PackageManager.COMPONENT_ENABLED_STATE_ENABLED,PackageManager.DONT_KILL_APP);
                                 pm.setComponentEnabledSetting(unhideComponentName,PackageManager.COMPONENT_ENABLED_STATE_DISABLED,PackageManager.DONT_KILL_APP);
