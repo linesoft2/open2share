@@ -104,7 +104,7 @@ public class SettingsActivity extends AppCompatActivity {
 
                     AlertDialog.Builder mDialogBuilder = new AlertDialog.Builder(getContext());
                     mDialogBuilder.setTitle("警告：")
-                            .setMessage("1.在部分系统下，隐藏桌面图标会导致本页面被关闭，您将很难再次进入到本页面，是否继续？\n2.部分系统不支持该功能")
+                            .setMessage("1.在部分系统下，隐藏桌面图标会导致本页面被关闭，您将很难再次进入到本页面.\n2.部分系统不支持该功能.\n是否继续？")
                             .setPositiveButton("是", (dialog, which) -> {
                                 pm.setComponentEnabledSetting(hideComponentName,PackageManager.COMPONENT_ENABLED_STATE_ENABLED,PackageManager.DONT_KILL_APP);
                                 pm.setComponentEnabledSetting(unhideComponentName,PackageManager.COMPONENT_ENABLED_STATE_DISABLED,PackageManager.DONT_KILL_APP);
