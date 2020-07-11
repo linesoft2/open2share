@@ -12,7 +12,7 @@ public class GuideActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         WebView webView = findViewById(R.id.webView);
-        webView.loadUrl("http://doc.linesoft.top/open2share/guide/");
+        webView.loadUrl("https://doc.linesoft.top/open2share/guide/");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         this.setTitle("使用说明");
     }
