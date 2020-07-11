@@ -1,0 +1,27 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="帮助">
+
+        <Preference
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:key="guide"
+            android:title="使用说明" />
+<!--            android:summary="本软件的使用说明"-->
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="设置">
+
+    </PreferenceCategory>
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="hide_icon"
+        android:summary="隐藏后，您可能只能通过卸载重装才能再次显示图标。"
+        android:title="隐藏桌面图标" />
+    <PreferenceCategory android:title="关于">
+        <Preference
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:key="about"
+            android:title="关于本软件" />
+    </PreferenceCategory>
+</PreferenceScreen>
