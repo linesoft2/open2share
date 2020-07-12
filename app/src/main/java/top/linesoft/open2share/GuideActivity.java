@@ -10,7 +10,7 @@ public class GuideActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_guide);
         WebView webView = findViewById(R.id.webView);
         webView.loadUrl("https://doc.linesoft.top/open2share/guide/");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

@@ -9,6 +9,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ReceiveOpenActivity extends AppCompatActivity {
 
+    protected void RemoveFromRecents(){
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        finishAffinity();
+    }
+
     /**
      * Dispatch incoming result to the correct fragment.
      *

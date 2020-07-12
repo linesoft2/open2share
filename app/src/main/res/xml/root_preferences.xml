@@ -1,9 +1,11 @@
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="帮助">
 
         <Preference
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_help_24"
             android:key="guide"
             android:title="使用说明" />
 <!--            android:summary="本软件的使用说明"-->
@@ -14,6 +16,7 @@
     </PreferenceCategory>
     <SwitchPreference
         android:defaultValue="false"
+        android:icon="@drawable/ic_baseline_restore_from_trash_24"
         android:key="hide_icon"
         android:summary="隐藏后，您可能只能通过卸载重装才能再次显示图标。"
         android:title="隐藏桌面图标" />
@@ -22,6 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:key="about"
-            android:title="关于本软件" />
+            android:title="关于“open2share”"
+            app:icon="@drawable/ic_baseline_mobile_screen_share_24" />
     </PreferenceCategory>
 </PreferenceScreen>
