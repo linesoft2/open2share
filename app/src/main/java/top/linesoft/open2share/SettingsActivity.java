@@ -50,10 +50,10 @@ public class SettingsActivity extends AppCompatActivity {
                 return true;
             }else if(preference == aboutPreference){
                 new AlertDialog.Builder(requireContext())
-                        .setTitle("关于本软件")
-                        .setMessage("作者：双霖")
-                        .setPositiveButton("确定",null)
-                        .setNeutralButton("网站", (dialog, which) -> {
+                        .setTitle(R.string.about_dialogue_title)
+                        .setMessage(R.string.about_dialogue_msg)
+                        .setPositiveButton(R.string.ok,null)
+                        .setNeutralButton(R.string.website, (dialog, which) -> {
                             Intent intent = new Intent();
                             intent.setAction("android.intent.action.VIEW");
                             Uri content_url = Uri.parse("https://www.linesoft.top");
@@ -94,7 +94,7 @@ public class SettingsActivity extends AppCompatActivity {
          */
         @Override
         public boolean onPreferenceChange(Preference preference, Object newValue) {
-            Log.d("onPreferenceChange", "onPreferenceChange: 被触发");
+//            Log.d("onPreferenceChange", "onPreferenceChange: 被触发");
             if(preference == hidePreference){
 //                Toast.makeText(getContext(),"当前值为："+newValue,Toast.LENGTH_LONG).show();
                 PackageManager pm = requireContext().getPackageManager();
@@ -103,13 +103,13 @@ public class SettingsActivity extends AppCompatActivity {
                 if((Boolean) newValue){
 
                     AlertDialog.Builder mDialogBuilder = new AlertDialog.Builder(getContext());
-                    mDialogBuilder.setTitle("警告：")
-                            .setMessage("1.在部分系统下，隐藏桌面图标会导致本页面被关闭，您将很难再次进入到本页面.\n2.部分系统不支持该功能.\n是否继续？")
-                            .setPositiveButton("是", (dialog, which) -> {
+                    mDialogBuilder.setTitle(R.string.warn)
+                            .setMessage(R.string.hide_tips)
+                            .setPositiveButton(R.string.yes, (dialog, which) -> {
                                 pm.setComponentEnabledSetting(hideComponentName,PackageManager.COMPONENT_ENABLED_STATE_ENABLED,PackageManager.DONT_KILL_APP);
                                 pm.setComponentEnabledSetting(unhideComponentName,PackageManager.COMPONENT_ENABLED_STATE_DISABLED,PackageManager.DONT_KILL_APP);
                                 SettingsFragment.this.hidePreference.setChecked(true);
-                    }).setNegativeButton("否",null).create().show();
+                    }).setNegativeButton(R.string.no,null).create().show();
                     return false;
 
 

@@ -1,19 +1,21 @@
 <resources>
     <string name="app_name">open2share</string>
-    <string name="title_activity_settings">open2share</string>
+    <string name="convert_text">转换为分享文件</string>
+    <string name="guide">使用说明</string>
+    <string name="hide_describe">隐藏后，您可能只能通过卸载重装才能再次显示图标。</string>
+    <string name="hide">隐藏桌面图标</string>
+    <string name="about">关于</string>
+    <string name="about_title">关于“open2share”</string>
+    <string name="help">帮助</string>
+    <string name="settings">设置</string>
+    <string name="share_title">分享文件</string>
+    <string name="warn">警告：</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="hide_tips">1.在部分系统下，隐藏桌面图标会导致本页面被关闭，您将很难再次进入到本页面.\n2.部分系统不支持该功能. 是否继续？</string>
+    <string name="about_dialogue_title">关于本软件</string>
+    <string name="about_dialogue_msg">作者：双霖(LineSoft)</string>
+    <string name="ok">确定</string>
+    <string name="website">网站</string>
 
-    <!-- Preference Titles -->
-    <string name="messages_header">Messages</string>
-    <string name="sync_header">Sync</string>
-
-    <!-- Messages Preferences -->
-    <string name="signature_title">Your signature</string>
-    <string name="reply_title">Default reply action</string>
-
-    <!-- Sync Preferences -->
-    <string name="sync_title">Sync email periodically</string>
-    <string name="attachment_title">Download incoming attachments</string>
-    <string name="attachment_summary_on">Automatically download attachments for incoming emails
-    </string>
-    <string name="attachment_summary_off">Only download attachments when manually requested</string>
 </resources>

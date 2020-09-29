@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">open2share</string>
+    <string name="convert_text">Convert to share</string>
+    <string name="guide">Usage</string>
+    <string name="hide_describe">After hiding, you may have to uninstall and reload to display the icon again.</string>
+    <string name="hide">hide icon from launcher</string>
+    <string name="about">about</string>
+    <string name="about_title">about \"open2share\"</string>
+    <string name="help">help</string>
+    <string name="settings">settings</string>
+    <string name="share_title">share</string>
+    <string name="warn">WARN</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="hide_tips">1. In some systems, hiding the desktop icon will cause this page to be closed, and it will be difficult for you to enter this page again. \n2. Some systems do not support this function. Do you want to continue?</string>
+    <string name="about_dialogue_title">about</string>
+    <string name="about_dialogue_msg">Author: 双霖(LineSoft)</string>
+    <string name="ok">OK</string>
+    <string name="website">Website</string>
+</resources>

@@ -9,23 +9,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ReceiveOpenActivity extends AppCompatActivity {
 
-    protected void RemoveFromRecents(){
-
-    }
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
         finishAffinity();
     }
 
-    /**
-     * Dispatch incoming result to the correct fragment.
-     *
-     * @param requestCode
-     * @param resultCode
-     * @param data
-     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -52,7 +41,7 @@ public class ReceiveOpenActivity extends AppCompatActivity {
 //        Log.d("分享","Type："+ getIntent().getType());
         sendIntent.putExtra(Intent.EXTRA_STREAM, getIntent().getData());
         sendIntent.setType(getIntent().getType());
-        startActivityForResult(Intent.createChooser(sendIntent,"分享文件"),1);
+        startActivityForResult(Intent.createChooser(sendIntent,getString(R.string.share_title)),1);
         //finish();
 
     }
