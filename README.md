@@ -10,7 +10,7 @@
 
 在打开文件时选择“转换为分享文件”，然后再进行分享操作即可。
 
-Select "convert to share file" when opening the file, and then share it.
+Select "Convert to share" when opening the file, and then share it.
 
 ------
 
