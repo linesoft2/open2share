@@ -1,6 +1,6 @@
 ## open2share
 
-**这是一款可以将打开文件(open, ACTION_VIEW)转换为分享文件(share, ACTION_SEND)的小工具。**
+**这是一款可以将打开文件(open, ACTION_VIEW)转换为分享文件(share, ACTION_SEND)的Android小工具。**
 
 **An Android app that can convert open(ACTION_VIEW) files to share(ACTION_SEND) files.**
 
