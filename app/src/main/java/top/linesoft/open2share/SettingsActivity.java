@@ -36,12 +36,6 @@ public class SettingsActivity extends AppCompatActivity {
         SwitchPreference hidePreference;
         Preference aboutPreference;
 
-        /**
-         * Called when a preference has been clicked.
-         *
-         * @param preference The preference that was clicked
-         * @return {@code true} if the click was handled
-         */
         @Override
         public boolean onPreferenceClick(Preference preference) {
             if (preference == guidePreference){

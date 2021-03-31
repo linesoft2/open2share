@@ -18,7 +18,6 @@
         android:defaultValue="false"
         android:icon="@drawable/ic_baseline_restore_from_trash_24"
         android:key="hide_icon"
-        android:summary="@string/hide_describe"
         android:title="@string/hide" />
     <PreferenceCategory android:title="@string/about">
         <Preference

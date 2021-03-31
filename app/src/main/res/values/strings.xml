@@ -2,7 +2,6 @@
     <string name="app_name">open2share</string>
     <string name="convert_text">转换为分享文件</string>
     <string name="guide">使用说明</string>
-    <string name="hide_describe">隐藏后，您可能只能通过卸载重装才能再次显示图标。</string>
     <string name="hide">隐藏桌面图标</string>
     <string name="about">关于</string>
     <string name="about_title">关于“open2share”</string>
@@ -12,7 +11,7 @@
     <string name="warn">警告：</string>
     <string name="yes">是</string>
     <string name="no">否</string>
-    <string name="hide_tips">1.在部分系统下，隐藏桌面图标会导致本页面被关闭，您将很难再次进入到本页面.\n2.部分系统不支持该功能. 是否继续？</string>
+    <string name="hide_tips">1.隐藏后，您可能只能通过卸载重装才能再次显示图标。 2.在部分系统下，隐藏桌面图标会导致本页面被关闭，您将很难再次进入到本页面。 3.部分系统不支持该功能，隐藏后桌面仍会显示图标。 是否继续？</string>
     <string name="about_dialogue_title">关于本软件</string>
     <string name="about_dialogue_msg">作者：双霖(LineSoft)</string>
     <string name="ok">确定</string>
