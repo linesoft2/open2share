@@ -4,6 +4,10 @@
 
 **An Android app that can convert open(ACTION_VIEW) files to share(ACTION_SEND) files.**
 
+[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
+     alt="Get it on F-Droid"
+     height="80">](https://f-droid.org/packages/top.linesoft.open2share/)
+
 用于解决某些App因为一己之私而不提供分享文件功能导致的各种不便（如某讯的两大社交App）。
 
 ## 公告
