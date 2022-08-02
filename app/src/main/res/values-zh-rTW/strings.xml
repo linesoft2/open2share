@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">open2share</string>
+    <string name="convert_text">轉換為分享文件</string>
+    <string name="guide">使用說明</string>
+    <string name="hide">隱藏桌面圖示</string>
+    <string name="about">關於</string>
+    <string name="about_title">關於 open2share</string>
+    <string name="help">幫助</string>
+    <string name="settings">設置</string>
+    <string name="share_title">分享文件</string>
+    <string name="warn">警告</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="hide_tips">1. 隱藏後，您可能只能通過卸載重裝才能再次顯示圖示.\n2. 在部分系統下，隱藏桌面圖示會導致本頁面被關閉，您將很難再次進入到本頁面。\n3.部分系統不支持該功能，隱藏後桌面仍會顯示圖示。\n是否繼續？</string>
+    <string name="about_dialogue_title">關於本軟體</string>
+    <string name="about_dialogue_msg">作者：雙霖 (LineSoft)</string>
+    <string name="ok">確定</string>
+    <string name="website">網站</string>
+</resources>
