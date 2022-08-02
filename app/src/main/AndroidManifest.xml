@@ -50,6 +50,8 @@
         <activity
             android:name=".ReceiveOpenActivity"
             android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme.NoDisplay"
             android:exported="true">
             <intent-filter
                 android:label="@string/convert_text"

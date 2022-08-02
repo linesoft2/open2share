@@ -32,12 +32,12 @@ public class ReceiveOpenActivity extends AppCompatActivity {
 //        StrictMode.setVmPolicy(builder.build());
 //        builder.detectFileUriExposure();
 
-        setContentView(R.layout.activity_receive_open);
+        //setContentView(R.layout.activity_receive_open);
         //Toast.makeText(this,"已经将打开文件转换为分享文件",Toast.LENGTH_LONG).show();
 
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        //sendIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         sendIntent.addCategory("android.intent.category.DEFAULT");
 //        Log.d("分享","Data："+ getIntent().getData().toString());
 //        Log.d("分享","Type："+ getIntent().getType());
