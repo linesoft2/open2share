@@ -1,7 +1,9 @@
 package top.linesoft.open2share;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.StrictMode;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,25 +28,23 @@ public class ReceiveOpenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //解决极少数旧App未使用URI分享会导致报错的问题
-        //目前来看这类应用极少，先注释掉了
-//        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
-//        StrictMode.setVmPolicy(builder.build());
-//        builder.detectFileUriExposure();
-
-        //setContentView(R.layout.activity_receive_open);
-        //Toast.makeText(this,"已经将打开文件转换为分享文件",Toast.LENGTH_LONG).show();
-
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
-        //sendIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        sendIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         sendIntent.addCategory("android.intent.category.DEFAULT");
-//        Log.d("分享","Data："+ getIntent().getData().toString());
+        Uri uri = getIntent().getData();
+//        Log.d("分享","Data："+ getIntent().getData().toString()+ uri.getScheme());
 //        Log.d("分享","Type："+ getIntent().getType());
-        sendIntent.putExtra(Intent.EXTRA_STREAM, getIntent().getData());
+        if (uri.getScheme().equals("file")) {
+            //API24以上系统分享支持file:///开头
+            StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+            StrictMode.setVmPolicy(builder.build());
+            builder.detectFileUriExposure();
+        }
+        sendIntent.putExtra(Intent.EXTRA_STREAM, uri);
         sendIntent.setType(getIntent().getType());
-        startActivityForResult(Intent.createChooser(sendIntent,getString(R.string.share_title)),1);
+        sendIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        startActivityForResult(Intent.createChooser(sendIntent, getString(R.string.share_title)), 1);
         //finish();
-
     }
 }

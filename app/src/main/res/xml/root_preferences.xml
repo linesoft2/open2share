@@ -14,7 +14,7 @@
     <PreferenceCategory android:title="@string/settings">
 
     </PreferenceCategory>
-    <SwitchPreference
+    <SwitchPreferenceCompat
         android:defaultValue="false"
         android:icon="@drawable/ic_baseline_restore_from_trash_24"
         android:key="hide_icon"
