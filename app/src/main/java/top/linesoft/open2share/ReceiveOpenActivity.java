@@ -4,9 +4,11 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.PreferenceManager;
 
 public class ReceiveOpenActivity extends AppCompatActivity {
 
@@ -36,10 +38,16 @@ public class ReceiveOpenActivity extends AppCompatActivity {
 //        Log.d("分享","Data："+ getIntent().getData().toString()+ uri.getScheme());
 //        Log.d("分享","Type："+ getIntent().getType());
         if (uri.getScheme().equals("file")) {
-            //API24以上系统分享支持file:///开头
-            StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
-            StrictMode.setVmPolicy(builder.build());
-            builder.detectFileUriExposure();
+           boolean b= PreferenceManager.getDefaultSharedPreferences(this).getBoolean("use_file_uri",false);
+           if (b){
+               //API24以上系统分享支持file:///开头
+               StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+               StrictMode.setVmPolicy(builder.build());
+               builder.detectFileUriExposure();
+           }else{
+               Toast.makeText(getApplicationContext(), R.string.no_use_file_uri_msg, Toast.LENGTH_LONG).show();
+               finishAffinity();
+           }
         }
         sendIntent.putExtra(Intent.EXTRA_STREAM, uri);
         sendIntent.setType(getIntent().getType());

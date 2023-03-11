@@ -16,4 +16,7 @@
     <string name="about_dialogue_msg">Author: 双霖 (LineSoft)</string>
     <string name="ok">OK</string>
     <string name="website">Website</string>
+    <string name="open_file_uri">compatible fileUri types</string>
+    <string name="open_file_uri_msg">Android 7 and above, because security issues do not discourage the use of fileUri, therefore, turning on this option will consent to the security risk it brings</string>
+    <string name="no_use_file_uri_msg">FileUri is not turned on</string>
 </resources>

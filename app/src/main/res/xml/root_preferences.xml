@@ -1,5 +1,5 @@
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <PreferenceCategory android:title="@string/help">
 
         <Preference
@@ -8,17 +8,22 @@
             android:icon="@drawable/ic_baseline_help_24"
             android:key="guide"
             android:title="@string/guide" />
-<!--            android:summary="本软件的使用说明"-->
+        <!--            android:summary="本软件的使用说明"-->
 
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/settings">
-
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:icon="@drawable/ic_baseline_restore_from_trash_24"
+            android:key="hide_icon"
+            android:title="@string/hide" />
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:icon="@drawable/ic_baseline_healing_24"
+            android:key="use_file_uri"
+            android:title="@string/open_file_uri" />
     </PreferenceCategory>
-    <SwitchPreferenceCompat
-        android:defaultValue="false"
-        android:icon="@drawable/ic_baseline_restore_from_trash_24"
-        android:key="hide_icon"
-        android:title="@string/hide" />
+
     <PreferenceCategory android:title="@string/about">
         <Preference
             android:layout_width="match_parent"

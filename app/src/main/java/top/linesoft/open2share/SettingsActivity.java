@@ -1,6 +1,7 @@
 package top.linesoft.open2share;
 
 import android.content.ComponentName;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -34,6 +35,7 @@ public class SettingsActivity extends AppCompatActivity {
     public static class SettingsFragment extends BaseSettingsFragment implements Preference.OnPreferenceClickListener, Preference.OnPreferenceChangeListener {
         Preference guidePreference;
         SwitchPreferenceCompat hidePreference;
+        SwitchPreferenceCompat fileUriPreference;
         Preference aboutPreference;
 
         @Override
@@ -71,10 +73,12 @@ public class SettingsActivity extends AppCompatActivity {
             if (hidePreference != null) {
                 hidePreference.setOnPreferenceChangeListener(this);
             }
+            fileUriPreference = findPreference("use_file_uri");
+            if (fileUriPreference != null) {
+                fileUriPreference.setOnPreferenceChangeListener(this);
+            }
             aboutPreference = findPreference("about");
             aboutPreference.setOnPreferenceClickListener(this);
-
-
         }
 
         /**
@@ -112,6 +116,20 @@ public class SettingsActivity extends AppCompatActivity {
                     return true;
                 }
 
+            } else if (preference == fileUriPreference) {
+                if ((Boolean) newValue) {
+                    MaterialAlertDialogBuilder mDialogBuilder = new MaterialAlertDialogBuilder(requireActivity());
+                    mDialogBuilder.setTitle(R.string.warn)
+                            .setMessage(R.string.open_file_uri_msg)
+                            .setPositiveButton(R.string.yes, (dialog, which) -> {
+                                SettingsFragment.this.fileUriPreference.setChecked(true);
+                            }).setNegativeButton(R.string.no, (dialog, which) -> {
+                                SettingsFragment.this.fileUriPreference.setChecked(false);
+                            }).create().show();
+                    return false;
+                } else {
+                    return true;
+                }
             }
             return false;
         }

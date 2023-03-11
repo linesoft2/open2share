@@ -17,4 +17,7 @@
     <string name="about_dialogue_msg">作者：雙霖 (LineSoft)</string>
     <string name="ok">確定</string>
     <string name="website">網站</string>
+    <string name="open_file_uri">相容fileUri類型</string>
+    <string name="open_file_uri_msg">android7以上，因為安全問題不提倡使用fileUri，因此，打開此選項將同意帶來的安全風險</string>
+    <string name="no_use_file_uri_msg">未允許打開fileUri相容</string>
 </resources>
