@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ShareCompat;
 
 public class ReceiveOpenActivity extends AppCompatActivity {
 
@@ -35,16 +36,10 @@ public class ReceiveOpenActivity extends AppCompatActivity {
         //setContentView(R.layout.activity_receive_open);
         //Toast.makeText(this,"已经将打开文件转换为分享文件",Toast.LENGTH_LONG).show();
 
-        Intent sendIntent = new Intent();
-        sendIntent.setAction(Intent.ACTION_SEND);
-        //sendIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        sendIntent.addCategory("android.intent.category.DEFAULT");
-//        Log.d("分享","Data："+ getIntent().getData().toString());
-//        Log.d("分享","Type："+ getIntent().getType());
-        sendIntent.putExtra(Intent.EXTRA_STREAM, getIntent().getData());
-        sendIntent.setType(getIntent().getType());
-        startActivityForResult(Intent.createChooser(sendIntent,getString(R.string.share_title)),1);
-        //finish();
+        new ShareCompat.IntentBuilder(this)
+                .addStream(getIntent().getData())
+                .setType(getIntent().getType())
+                .startChooser();
 
     }
 }
