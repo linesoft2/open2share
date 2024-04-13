@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceManager;
 
+
 public class ReceiveOpenActivity extends AppCompatActivity {
 
     @Override
@@ -54,5 +55,6 @@ public class ReceiveOpenActivity extends AppCompatActivity {
         sendIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         startActivityForResult(Intent.createChooser(sendIntent, getString(R.string.share_title)), 1);
         //finish();
+
     }
 }
