@@ -14,7 +14,7 @@
     <string name="no">否</string>
     <string name="hide_tips">1. 隱藏後，您可能只能通過卸載重裝才能再次顯示圖示.\n2. 在部分系統下，隱藏桌面圖示會導致本頁面被關閉，您將很難再次進入到本頁面。\n3.部分系統不支持該功能，隱藏後桌面仍會顯示圖示。\n是否繼續？</string>
     <string name="about_dialogue_title">關於本軟體</string>
-    <string name="about_dialogue_msg">作者：雙霖 (LineSoft)</string>
+    <string name="about_dialogue_msg">雙霖及開源社區貢獻者 版權所有</string>
     <string name="ok">確定</string>
     <string name="website">網站</string>
     <string name="open_file_uri">相容fileUri類型</string>

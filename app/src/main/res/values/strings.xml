@@ -13,7 +13,7 @@
     <string name="no">No</string>
     <string name="hide_tips">1. After hiding, you may have to uninstall and reinstall to display the icon again.\n2. In some systems, hiding the desktop icon will cause this page to be closed, and it will be difficult for you to open this page again.\n3. Some systems do not support this function.\nDo you want to continue?</string>
     <string name="about_dialogue_title">About</string>
-    <string name="about_dialogue_msg">Author: 双霖 (LineSoft)</string>
+    <string name="about_dialogue_msg">Copyright ©️ LineSoft and Contributors.</string>
     <string name="ok">OK</string>
     <string name="website">Website</string>
     <string name="open_file_uri">compatible fileUri types</string>

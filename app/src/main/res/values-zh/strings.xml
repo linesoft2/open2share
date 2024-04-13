@@ -14,7 +14,7 @@
     <string name="no">否</string>
     <string name="hide_tips">1. 隐藏后，您可能只能通过卸载重装才能再次显示图标。\n2. 在部分系统下，隐藏桌面图标会导致本页面被关闭，您将很难再次进入到本页面。\n3.部分系统不支持该功能，隐藏后桌面仍会显示图标。\n是否继续？</string>
     <string name="about_dialogue_title">关于本软件</string>
-    <string name="about_dialogue_msg">作者：双霖 (LineSoft)</string>
+    <string name="about_dialogue_msg">双霖及开源社区贡献者 版权所有</string>
     <string name="ok">确定</string>
     <string name="website">网站</string>
     <string name="open_file_uri">兼容fileUri类型</string>
