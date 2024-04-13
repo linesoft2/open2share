@@ -49,13 +49,6 @@ public class SettingsActivity extends AppCompatActivity {
                         .setTitle(R.string.about_dialogue_title)
                         .setMessage(R.string.about_dialogue_msg)
                         .setPositiveButton(R.string.ok, null)
-                        .setNeutralButton(R.string.website, (dialog, which) -> {
-                            Intent intent = new Intent();
-                            intent.setAction("android.intent.action.VIEW");
-                            Uri content_url = Uri.parse("https://www.linesoft.top");
-                            intent.setData(content_url);
-                            startActivity(intent);
-                        })
                         .create()
                         .show();
             }
