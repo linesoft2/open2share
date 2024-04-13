@@ -8,8 +8,6 @@
      alt="Get it on F-Droid"
      height="80">](https://f-droid.org/packages/top.linesoft.open2share/)
 
-用于解决某些App因为一己之私而不提供分享文件功能导致的各种不便（如某讯的两大社交App）。
-
 ## 使用方法/Usage
 
 在打开文件时选择“转换为分享文件”，然后再进行分享操作即可。
